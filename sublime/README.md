@@ -17,8 +17,8 @@ Requirements
 Solo.rb
 -----
 
-# echo "file_cache_path "/home/<user>/.chef/cache"" > solo.rb
-# echo "cookbook_path "/home/<user>/.chef/cookbooks"" >> solo.rb
+- echo "file_cache_path "/home/<user>/.chef/cache"" > solo.rb
+- echo "cookbook_path "/home/<user>/.chef/cookbooks"" >> solo.rb
 
 Usage
 -----

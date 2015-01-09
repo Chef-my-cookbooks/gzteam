@@ -16,8 +16,8 @@ OS Targets:
 Solo.rb
 -----
 
-# echo "file_cache_path "/home/swaroop/.chef/cache"" > solo.rb
-# echo "cookbook_path "/home/swaroop/.chef/cookbooks"" >> solo.rb
+- echo "file_cache_path "/home/swaroop/.chef/cache"" > solo.rb
+- echo "cookbook_path "/home/swaroop/.chef/cookbooks"" >> solo.rb
 
 Note: path might change in case of Windows, I've written this cookbook on my linux machine and ran it on Windows.
 
