@@ -1,6 +1,6 @@
 # Mentioning actions for masters_preferences
 
-action :master_preferences
+actions :master_preferences
 default_action :master_preferences
 
 attribute :name, kind_of: String, name_attribute: true

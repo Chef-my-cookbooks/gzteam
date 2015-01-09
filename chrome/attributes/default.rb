@@ -1,7 +1,7 @@
 # Define chrome 
 
-default ['chrome']['track']		= 'stable'
-default ['chrome']['32bit_only']	= false
+#default ['chrome']['track']		= 'stable'
+#default ['chrome']['32bit_only']	= false
 
 #Defining path for master_preferences
 

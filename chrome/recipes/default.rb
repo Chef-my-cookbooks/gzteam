@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-windows_packages 'Google Chrome' do
-  if chrome = node['kernel']['machine'] == 'x86_64'
+windows_package 'Google Chrome' do
+  if node['kernel']['machine'] == 'x86_64'
      source node['chrome']['msi_64']
      action :install
   else
@@ -17,18 +17,11 @@ windows_packages 'Google Chrome' do
   end
 end
 
-chrome 'custom_preferences' do
-  params(
-    "homepage" : "blank"
-    "browser" : { 
-    	"check_default_browser" : false
-    },
-    "distribution" : {	
-	"make_chrome_default" : false,
-        "show_pop-ups" : false,
-	"save_password" : false
-   )
-  action :master_preferences
+# Pushing custom preferences for Chrome.
+
+cookbook_file "master_preferences" do
+  source "master_preferences"
+  path "C:\\Program Files (x86)\\Google\\Chrome\\Application\\master_preferences"
 end
 
 # Stop Google Updates
@@ -38,7 +31,7 @@ registry_key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update\UpdateDefault" 
 	:name => "REG_DWORD",
 	:type => :string,
 	:data => ['0']
-	]}
+	}]
   action :create
 end
 

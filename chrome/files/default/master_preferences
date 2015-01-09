@@ -1,0 +1,4 @@
+﻿{
+  "browser":{"check_default_browser":false,"show_popups":false,"save_password":false}
+  "distribution":{"msi":true,"system_level":true,"verbose_logging":true, "make_default_browser":false}
+}
